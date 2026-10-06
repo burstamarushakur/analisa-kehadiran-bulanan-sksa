@@ -1,0 +1,13 @@
+<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kehadiran IDME SKSA</title><link rel="stylesheet" href="popup.css"></head><body>
+<header><span class="badge">SKSA</span><div><small>KEHADIRAN IDME · v0.2.0</small><h1>Sambungan guru kelas</h1></div></header>
+<main><form id="settings-form"><label for="ic">IC akaun IDME</label><input id="ic" inputmode="numeric" maxlength="14" autocomplete="off" placeholder="Contoh: 122333014444" required>
+<label for="password">Password IDME</label><input id="password" type="password" autocomplete="new-password" placeholder="Isi sekali untuk auto login">
+<label class="check"><input id="remember" type="checkbox" checked><span>Ingat password pada browser ini untuk auto login.</span></label>
+<label for="webapp">Pautan webapp</label><input id="webapp" type="url" placeholder="https://nama-webapp.vercel.app"><p class="hint">Boleh dibiarkan kosong untuk ujian ambil data dahulu. Password kekal dalam simpanan extension pada browser ini.</p>
+<button class="primary" type="submit" id="save">SIMPAN TETAPAN</button></form>
+<p id="status" role="status" aria-live="polite">Simpan tetapan untuk bermula.</p>
+<div class="row"><label for="year">Tahun</label><input id="year" type="number" min="2020" max="2100"></div>
+<button id="sync" class="green">AMBIL SEMUA BULAN</button><div class="actions"><button id="open">Buka tab IDME</button><button id="cancel">Hentikan</button></div>
+<div class="progress-header"><strong>Status pengambilan</strong><span id="count">0 bulan</span></div><ol id="progress"><li class="muted">Belum bermula.</li></ol>
+<button id="download" class="outline">MUAT TURUN DATA / LAPORAN STATUS</button><button id="forget" class="quiet">Buang password tersimpan</button>
+<p class="footer">Ujian pertama: semak bilangan murid dan jumlah kehadiran dalam hasil JSON. Webapp akan mengambil hasil ini secara automatik selepas pautannya dipadankan.</p></main><script type="module" src="popup.js"></script></body></html>

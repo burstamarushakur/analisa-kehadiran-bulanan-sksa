@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "SKSA — Kehadiran IDME",
+  "version": "0.2.0",
+  "minimum_chrome_version": "120",
+  "description": "Login IDME dan ambil laporan kehadiran semua bulan untuk webapp SKSA.",
+  "permissions": ["storage", "scripting", "activeTab", "alarms", "downloads"],
+  "host_permissions": ["https://idme.moe.gov.my/*", "https://moeispel.moe.gov.my/*"],
+  "optional_host_permissions": ["https://*/*", "http://localhost/*", "http://127.0.0.1/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "content_scripts": [{"matches": ["https://idme.moe.gov.my/*", "https://moeispel.moe.gov.my/*"], "js": ["driver.js"], "run_at": "document_idle"}],
+  "action": {"default_title": "Kehadiran IDME SKSA", "default_popup": "popup.html"}
+}

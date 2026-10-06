@@ -1,0 +1,2 @@
+import {validateRecord,normalizeIc,mergeRecords} from './core.js';
+export function importPayload(payload,ownerIc){const ic=normalizeIc(ownerIc);if(payload?.tool!=='sksa-idme-kehadiran-data'||payload.schemaVersion!=='1.0'||payload.teacherIc!==ic||!Array.isArray(payload.records)||payload.records.length>1200)throw new Error('Pilih JSON data kehadiran daripada extension SKSA untuk IC yang sama. Fail pemeriksa struktur bukan data laporan.');return mergeRecords([],payload.records.map(record=>validateRecord(record,ic)));}

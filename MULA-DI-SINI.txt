@@ -1,0 +1,17 @@
+SKSA KEHADIRAN BULANAN IDME v0.2.0
+
+1. EKSTRAK ZIP INI.
+2. Buka chrome://extensions > Developer mode > Load unpacked.
+3. Pilih folder extension dalam folder projek ini.
+4. Buka extension SKSA, masukkan IC + password IDME sendiri.
+5. Simpan tetapan > Ambil semua bulan > Muat turun data JSON.
+
+URL webapp boleh kosong untuk ujian extension pertama.
+Webapp belum diterbitkan. Panduan localhost dan Vercel ada dalam README.md.
+
+Webapp: IC sahaja.
+Auto login IDME: perlu password yang disimpan sekali dalam extension.
+Laporan: semua bulan yang ada data, PDF dan cetakan.
+
+CONTOH-SKSA-Laporan-Januari.pdf menggunakan data sintetik.
+Tiada password atau data murid sebenar disertakan dalam pakej.
